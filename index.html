@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		
 		<link href="style.css" rel="stylesheet" type="text/css" >
 		<link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
 		<title>Donations App</title>
 	</head>
 	<body>
-		<div id = 'title'>
-			<h1 id = 'title'>Donations: The Webapp</h1>
-		</div>
+		<header>
+			<div id = 'title'>
+				<h1 id = 'title'>Donations: The Webapp</h1>
+			</div>
+			<button class="hamburger">&#9776;</button>
+			<button class="cross">&#735;</button>
+			<div class="menu">
+				<ul>
+					<a href="#"><li>LINK ONE</li></a>
+					<a href="#"><li>LINK TWO</li></a>
+					<a href="#"><li>LINK THREE</li></a>
+					<a href="#"><li>LINK FOUR</li></a>
+					<a href="#"><li>LINK FIVE</li></a>
+				</ul>
+			</div>
+		</header>
 		<div id = 'line'>
 		</div>
-		<div id = 'secondarytitle'>
-			<h2 id = 'donationsin'>Donations in:&nbsp;</h2>
-			<h2 id = 'location'>NYC<h2>
-		</div>
+		<h2 id = 'donationsin'>Donations in:&nbsp;</h2>
+		<h2 id = 'location'>NYC</h2>
 		<div id = 'changeloc'>
+			<a href = 'https://www.google.com'>Change Location</a>
+		</div>
+		<div id = 'place1'>
+			<span>Donation Place 1</span>
+			<!--
+			<img src='https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-512.png' width = '20px' height = '20px'>
+			--->
+		</div>	
+		<div id = 'place1info'>
+			<img src='http://onelovemassive.com/wp-content/uploads/2016/10/test-image.png' height = '200' width = '400' class = 'centered'>
+			<p>Test description</p>
 		</div>
 	</body>
-	<script src = 'script.js'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src = 'script.js'></script>
 </html>
