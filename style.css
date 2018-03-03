@@ -40,7 +40,7 @@ span{
 	margin: 0em;
 	margin-left: 6.25em;
 }
-#place1{
+.place{
 	height: 6.25em;
 	width: 20em;
 	border: 0.125em solid black;
@@ -54,6 +54,9 @@ span{
 	font-family: 'ABeeZee';
 	color: #0F084B;
 	cursor:pointer;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	
 }
 img{
 	
@@ -133,4 +136,5 @@ a{color:#336699;}
 .centered{
 	display: block;
 	margin: 0 auto;
+	text-align: center;
 }
