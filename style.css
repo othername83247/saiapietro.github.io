@@ -2,33 +2,135 @@ h1, h2{
 	font-family: 'ABeeZee';
 	color: #0F084B;
 }
+.testdiv{
+	background-color: red;
+	width: 100px;
+	height: 100px;
+}
 h1{
 	text-align: center;
+	
 }
 h2#donationsin{
-	margin-left: 310px;
+	margin-left: 43%;
 }
 h2{
-	margin-top: 10px;
+	margin-top: 0.063em;
 	display: inline-block;
-	
 }
 #title{
-	height: 50px;
-	
-}
-body {
-	background-color: #A6CFD5;
-	margin: 0px;
+	height: 3.125em;
 }
 #line{
-	height: 2px;
+	height: 0.125em;
 	background-color: #0D0221;
 }
 #changeloc{
-	display: inline-flex;
-	width: 100px;
-	height: 50px;
-	background-color: red;
-	float: right;
+	display: inline-block;
+	width: 4.688em;
+	height: 3.125em;
+	font-size: .8vw;
+	margin-left: 1.25em;
+	margin-top: 0.313em;
+}
+a{
+	text-decoration: none;
+}
+span{
+	margin: 0em;
+	margin-left: 6.25em;
+}
+#place1{
+	height: 6.25em;
+	width: 20em;
+	border: 0.125em solid black;
+	margin: auto;
+	display: block;
+	background-image: url('https://d30y9cdsu7xlg0.cloudfront.net/png/552721-200.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	vertical-align: middle;
+	line-height: 6.25em;
+	font-family: 'ABeeZee';
+	color: #0F084B;
+	cursor:pointer;
+}
+img{
+	
+}
+/*definitely not stolen*/
+body{
+    font-family: 'Noto Sans', sans-serif;
+	margin:0;
+	width:100%;
+	height:100vh;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: #A6CFD5;
+}
+header{
+	width:100%; 
+	height:60px; 
+	line-height:60px;
+	border-bottom:1px solid #dddddd;
+	background-color: #A6CFD5;
+}
+.hamburger{
+  background:none;
+  position:absolute;
+  top:0;
+  right:0;
+  line-height:45px;
+  padding:5px 15px 0px 15px;
+  color:#999;
+  border:0;
+  font-size:3em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.cross{
+  background:none;
+  position:absolute;
+  top:0px;
+  right:0;
+  padding:15px 15px 0px 15px;
+  color:#999;
+  border:0;
+  font-size:8em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.menu{z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:#f1f1f1;  position:absolute; text-align:center; font-size:12px;}
+.menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
+.menu li {display: block;   padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
+.menu li:hover{display: block;    background:#ffffff; padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
+.menu ul li a { text-decoration:none;  margin: 0px; color:#666;}
+.menu ul li a:hover {  color: #666; text-decoration:none;}
+.menu a{text-decoration:none; color:#666;}
+.menu a:hover{text-decoration:none; color:#666;}
+
+.glyphicon-home{
+  color:white; 
+  font-size:1.5em; 
+  margin-top:5px; 
+  margin:0 auto;
+}
+header{display:inline-block; font-size:12px;}
+span{padding-left:20px;}
+a{color:#336699;}
+
+#place1info{
+	margin: auto;
+	margin-top: 5px;
+    width: 50%;
+	text-align: center;
+}
+.centered{
+	display: block;
+	margin: 0 auto;
 }
