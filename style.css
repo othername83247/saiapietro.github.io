@@ -2,12 +2,9 @@ h1, h2{
 	font-family: 'ABeeZee';
 	color: #0F084B;
 }
-<<<<<<< HEAD
 span{
 	font-family: 'ABeeZee';
 }
-=======
->>>>>>> ef873bb864fc13843814b90be553c6f2c2d7256e
 .testdiv{
 	background-color: red;
 	width: 100px;
@@ -39,17 +36,10 @@ h2{
 	margin-left: 1.25em;
 	margin-top: 0.313em;
 }
-<<<<<<< HEAD
 a:hover{
 	text-decoration: none;
 }
 span.main{
-=======
-a{
-	text-decoration: none;
-}
-span{
->>>>>>> ef873bb864fc13843814b90be553c6f2c2d7256e
 	margin: 0em;
 	margin-left: 6.25em;
 }
@@ -76,10 +66,7 @@ img{
 }
 /*definitely not stolen*/
 body{
-<<<<<<< HEAD
 	position: relative;
-=======
->>>>>>> ef873bb864fc13843814b90be553c6f2c2d7256e
     font-family: 'Noto Sans', sans-serif;
 	margin:0;
 	width:100%;
@@ -141,11 +128,7 @@ header{
   margin:0 auto;
 }
 header{display:inline-block; font-size:12px;}
-<<<<<<< HEAD
 span.menu{padding-left:20px;}
-=======
-span{padding-left:20px;}
->>>>>>> ef873bb864fc13843814b90be553c6f2c2d7256e
 a{color:#336699;}
 
 #place1info{
@@ -159,7 +142,6 @@ a{color:#336699;}
 	margin: 0 auto;
 	text-align: center;
 }
-<<<<<<< HEAD
 #welcome{
   position: absolute;
   top: 50%;
@@ -178,5 +160,3 @@ a{color:#336699;}
 #welcome-button{
 	display: none;
 }
-=======
->>>>>>> ef873bb864fc13843814b90be553c6f2c2d7256e
