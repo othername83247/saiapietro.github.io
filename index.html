@@ -1,51 +1,128 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link href="style.css" rel="stylesheet" type="text/css" >
 		<link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+
 		<title>Donations App</title>
 	</head>
 	<body>
+
 		<header>
 			<div id = 'title'>
 				<h1 id = 'title'>Donations: The Webapp</h1>
 			</div>
-			<button class="hamburger">&#9776;</button>
-			<button class="cross">&#735;</button>
-			<div class="menu">
-				<ul>
-					<a href="#"><li>LINK ONE</li></a>
-					<a href="#"><li>LINK TWO</li></a>
-					<a href="#"><li>LINK THREE</li></a>
-					<a href="#"><li>LINK FOUR</li></a>
-					<a href="#"><li>LINK FIVE</li></a>
-				</ul>
-			</div>
 		</header>
-		<div id = 'line'>
+		<div id = 'line'></div>
+
+		<div id = 'welcome'>
+			<h1 id = 'welcome-message'> Welcome!</h1>
+			<h1 id = 'are-you-a'>Are you a: </h1>
+			<div id = 'welcome-button'>
+				<button class = 'btn' id = 'donator'>Donator</button>
+				<span>or</span>
+				<button class = 'btn' id = 'donation'>Donation Drive</button>
+			</div>
 		</div>
-		<h2 id = 'donationsin'>Donations in:&nbsp;</h2>
-		<h2 id = 'location'>NYC</h2>
-		<div id = 'changeloc'>
-			<a href = 'https://www.google.com'>Change Location</a>
+
+		<div id = 'filterpage'>
+			<div id = 'location'>
+			<h2>Please enter your location:</h2>
+			<div id = 'googlemaps'>
+				<p>Google Maps Maybe?
+			</div>
+			</div>
+			<div id = 'itemfilter'>
+				<h2>and your preferred items:</h2>
+				<select>
+					<option value = ''></option>
+					<option value = 'Clothes'>Clothes</option>
+					<option value = 'Food'>Food</option>
+				</select>
+				<br />
+				<button class = 'btn-lg btn-block' id = 'submitdonator' >Submit</button>
+			</div>
 		</div>
-		<div class = 'place' id = 'place1' >
-			<span>Donation Place 1</span>
-			<!--
-			<img src='https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-512.png' width = '20px' height = '20px'>
-			--->
-		</div>	
-		<div class = 'place' id = 'place2'>
-			<span>Donation Place 2</span>
-			<!--
-			<img src='https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-512.png' width = '20px' height = '20px'>
-			--->
-		</div>	
-		<div id = 'place1info'>
-			<img src='http://onelovemassive.com/wp-content/uploads/2016/10/test-image.png' height = '200' width = '400' class = 'centered'>
-			<p>Test description</p>
+
+		<div id = 'createlistingpage'>
+			<div id = 'name'>
+				<h2>Enter your event's name:</h2>
+				<br />
+				<textarea cols = '40' rows = '1'id = 'nametextarea'></textarea>
+			</div>
+			<div id = 'locationinput'>
+				<h2>Enter your event's location:</h2>
+				<br />
+				<textarea cols = '40' rows = '1'id = 'locationtextarea'></textarea>
+			</div>
+			<div id = 'imageuploaddiv'>
+				<h2>Upload an image:</h2>
+				<input accept = 'image/*' type = 'file' id = 'imageupload'/>
+			</div>
+			<br/>
+			<div id = 'descriptioninput'>
+				<h2>Enter a full description of your event:</h2>
+				<textarea id = 'description' cols = '80' rows = '12'>
+				</textarea>
+			</div>
+			<div id = 'itemsselect'>
+				<h2>Select your preffered item:</h2>
+				<select>
+					<option value = ''></option>
+					<option value = 'Clothes'>Clothes</option>
+					<option value = 'Food'>Food</option>
+				</select>
+			</div>
+			<br />
+			<button class = 'btn-lg btn-block' id = 'submitdonation'  >Submit</button>
 		</div>
+
+		<div id = 'templatepage'>
+			<h2>Donation Drive Name</h2>
+			<br />
+			<img src = 'http://onelovemassive.com/wp-content/uploads/2016/10/test-image.png' height = '200' width = '400'/>
+			<br />
+			<p>
+				Bacon ipsum dolor amet sirloin tri-tip flank, shoulder pork belly jowl boudin. Prosciutto<br />
+				shank strip steak, kielbasa tongue kevin frankfurter. Shank salami turkey alcatra ball tip<br />
+				meatball capicola doner tenderloin. Salami sirloin boudin leberkas. T-bone shoulder short<br />
+				loin boudin chuck cow meatball andouille ham. Shankle shank porchetta, spare ribs corned<br />
+				beef pig landjaeger.
+			</p>
+			<p>
+				Location: somewhere
+			</p>
+			<p>
+			<span>
+				Accepted items:
+			</span>
+			<span>
+				Clothes
+			</span>
+			</p>
+		</div>
+
+		<div id = 'mainpage'>
+			<h2 id = 'donationsin'>Donations in:&nbsp;</h2>
+			<h2 id = 'location'>NYC</h2>
+			<div id = 'changeloc'>
+				<a href = 'https://www.google.com'>Change Location</a>
+			</div>
+			<div class = 'place' id = 'place1' >
+				<span class = 'main'>Donation Place 1</span>
+			</div>
+			<div class = 'place' id = 'place2'>
+				<span class = 'main'>Donation Place 2</span>
+			</div>
+			<div class = 'place' id = 'place3' >
+				<span class = 'main'>Donation Place 3</span>
+			</div>
+			<div class = 'place' id = 'place4' >
+				<span class = 'main'>Donation Place 4</span>
+
+			</div>
+	</div>
 	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src = 'script.js'></script>
