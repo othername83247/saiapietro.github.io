@@ -4,6 +4,21 @@ function arraySearch(arr,val) {
             return i;
     return false;
 }
+function moreInfo(x){
+  $('#templatename')[0].textContent = eval('localStorage.nametextarea' + x)
+  $('#pageimage')[0].src = eval('localStorage.imageUrl' + x)
+  $('#templatedescription')[0].textContent = eval('localStorage.descriptionname' + x)
+  $('#templatelocation')[0].textContent = eval('localStorage.locationtextarea' + x)
+  $('#templateoption')[0].textContent = eval('localStorage.accepteditems' + x)
+
+  $('#templatepage').fadeIn(1000)
+}
+function templatefunction(x){
+  var number = $(x).children().children()[1].id[4]
+  $('#mainpage').fadeOut(1000, function(){
+    moreInfo(number)
+  });
+};
 function getBase64Image(img) {
     var canvas = document.createElement("canvas");
     canvas.width = img.width;
@@ -28,12 +43,7 @@ function checkLocalStorage(name){
 		i++
 	}
 }
-function templatefunction(){
-	$('#templatename').textContent = eval('localStorage.nametextarea' + (this.id).slice('4'))
-	$('#mainpage').fadeOut(1000, function(){
-		$('#templatepage').fadeIn(1000)
-  });
-};
+
 $( document).ready(function() {
 //$('#mainpage').hide()
 //$( "#mainpage").fadeOut("slow", function(){})
@@ -115,12 +125,13 @@ if (typeof x != 'undefined'){
 	});
 	*/
 	x = '#place' + String(arraySearch(document.querySelectorAll('.place'),this)) + 'info'
+
 	if (String(arraySearch(document.querySelectorAll('.info'),$(x)['0'])) == 'false'){
-		$(this).after("<div id = 'place" + String(arraySearch(document.querySelectorAll('.place'),this)) + "info' style = 'display: none;' class = 'info'> <img src='http://onelovemassive.com/wp-content/uploads/2016/10/test-image.png' height = '200' width = '400' class = 'centered'> <p class = 'centered'><span>" + eval('localStorage.descriptionname' + (arraySearch($('.place'), this)+1))+ "</span><a href = 'javascript:templatefunction();' class = 'link' id = 'link" + (arraySearch($('.place'), this)+1) +"'>Learn more</a></p> </div>")
+		$(this).after("<div id = 'place" + String(arraySearch(document.querySelectorAll('.place'),this)) + "info' style = 'display: none;' class = 'info'> <img src='http://onelovemassive.com/wp-content/uploads/2016/10/test-image.png' height = '200' width = '400' class = 'centered'> <p class = 'centered'><span>" + eval('localStorage.descriptionname' + (arraySearch($('.place'), this)+1))+ "</span><a href = 'javascript:templatefunction(this);' class = 'link' id = 'link" + (arraySearch($('.place') +'</p>' , this)+1) +"'>Learn more</a></p> </div>")
 	}
 	$(x).slideToggle("slow")
 
-});  
+});
   $('#filterpage').fadeOut(1000, function(){
     $('#mainpage').fadeIn(1000)
   });
@@ -164,7 +175,7 @@ $('#submitdonation').click(function(){
 	  $('#' + $('.place')[$('.place').length - 1].id).after("<div class = 'place' id = 'place" + ($('.place') + 1) +"' ><span class = 'main'>" + eval("localStorage.nametextarea" + ($('.place').length - 1)) + "</span></div>")
   }
   $('#createlistingpage').fadeOut(1000, function(){
-    $('#templatepage').fadeIn(1000)
+  moreInfo(localStorage.inputnumber)
   });
 });
 
@@ -175,10 +186,16 @@ if ($('.place').length == 0){
   else{
 	  $('#' + $('.place')[$('.place').length - 1].id).after("<div class = 'place' id = 'place" + ($('.place') + 1) +"' ><span class = 'main'>" + eval("localStorage.nametextarea" + ($('.place').length - 1)) + "</span></div>")
   }*/
-
-
-
-
+//broken help
+$('#imageupload').change(function(){
+  var file = $('#imageupload')[0].files;
+  var reader = new FileReader();
+  reader.onloadend = function(){
+    var imageUrl = reader.result;
+    localStorage.setItem(checkLocalStorage('profileimage'), imageUrl);
+  }
+  reader.readAsDataURL(file);
 });
 
 
+});
