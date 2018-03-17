@@ -6,17 +6,17 @@ function arraySearch(arr,val) {
 }
 function moreInfo(x){
   $('#templatename')[0].textContent = eval('localStorage.nametextarea' + x)
-  $('#pageimage')[0].src = eval('localStorage.imageUrl' + x)
+  $('#pageimage')[0].src = eval('localStorage.profileimage' + x)
   $('#templatedescription')[0].textContent = eval('localStorage.descriptionname' + x)
   $('#templatelocation')[0].textContent = eval('localStorage.locationtextarea' + x)
   $('#templateoption')[0].textContent = eval('localStorage.accepteditems' + x)
 
   $('#templatepage').fadeIn(1000)
 }
-function templatefunction(x){
-  var number = $(x).children().children()[1].id[4]
+function templatefunction(linkelement){
+  var number = $("#" + 'link' + linkelement)[0].id[4]
   $('#mainpage').fadeOut(1000, function(){
-    moreInfo(number)
+    moreInfo(number);
   });
 };
 function getBase64Image(img) {
@@ -127,7 +127,7 @@ if (typeof x != 'undefined'){
 	x = '#place' + String(arraySearch(document.querySelectorAll('.place'),this)) + 'info'
 
 	if (String(arraySearch(document.querySelectorAll('.info'),$(x)['0'])) == 'false'){
-		$(this).after("<div id = 'place" + String(arraySearch(document.querySelectorAll('.place'),this)) + "info' style = 'display: none;' class = 'info'> <img src='http://onelovemassive.com/wp-content/uploads/2016/10/test-image.png' height = '200' width = '400' class = 'centered'> <p class = 'centered'><span>" + eval('localStorage.descriptionname' + (arraySearch($('.place'), this)+1))+ "</span><a href = 'javascript:templatefunction(this);' class = 'link' id = 'link" + (arraySearch($('.place') +'</p>' , this)+1) +"'>Learn more</a></p> </div>")
+		$(this).after("<div id = 'place" + String(arraySearch(document.querySelectorAll('.place'),this)) + "info' style = 'display: none;' class = 'info'><p class = 'centered' style = 'font-weight: bold; font-size: 2em;'>" + eval('localStorage.nametextarea' + $(this)[0].id[5]) + " </p><img src = '" + eval('localStorage.profileimage' + $(this)[0].id[5]) +  "' height = '200' width = '400' class = 'centered'> <p class = 'centered'><span>" + eval('localStorage.descriptionname' + $(this)[0].id[5]) + "</span><a href = 'javascript:templatefunction(" + $(this)[0].id[5] +");' class = 'link' id = 'link" + $(this)[0].id[5] +"'>&nbsp;Learn more</a></p> </div>")
 	}
 	$(x).slideToggle("slow")
 
@@ -188,10 +188,11 @@ if ($('.place').length == 0){
   }*/
 //broken help
 $('#imageupload').change(function(){
-  var file = $('#imageupload')[0].files;
+  var file = $('#imageupload')[0].files[0];
   var reader = new FileReader();
   reader.onloadend = function(){
     var imageUrl = reader.result;
+	
     localStorage.setItem(checkLocalStorage('profileimage'), imageUrl);
   }
   reader.readAsDataURL(file);
