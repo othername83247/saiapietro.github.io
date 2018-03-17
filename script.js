@@ -96,12 +96,14 @@ $('#donator').click(function(){
 
 $('#submitdonator').click(function(){
   for(i=1;i <= localStorage.inputnumber;i++){
-	if ($('.place').length == 0){
+	if (eval('localStorage.accepteditems' + i) == $('select')[0].value){
+	if ($('.place').length == 0) {
 	  $('#changeloc').after("<div class = 'place' id = 'place1' ><span class = 'main'>" + eval('localStorage.nametextarea' + i) + "</span></div>")
   }
   else{
 	  $('#' + $('.place')[$('.place').length - 1].id).after("<div class = 'place' id = 'place" + i +"' ><span class = 'main'>" + eval('localStorage.nametextarea' + i) + "</span></div>")
   }
+	}
 }
 
 $( ".place").click(function(){

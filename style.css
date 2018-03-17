@@ -61,16 +61,14 @@ span.main{
 	margin-top: 10px;
 
 }
-img{
 
-}
 
 body{
 	position: relative;
     font-family: 'Noto Sans', sans-serif;
 	margin:0;
 	width:100%;
-	height:100vh;
+	height:95vh;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background-color: rgb(58, 218, 115);
@@ -160,8 +158,15 @@ a{color:#336699;}
 select{
 	display: block;
 	margin: auto;
+	width: 342px;
 }
 #imageupload{
 	text-align: center;
 	margin: auto;
+}
+img{
+padding-bottom: 10px;
+}
+#entirepage{
+	overflow-y: auto;
 }
