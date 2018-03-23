@@ -48,13 +48,15 @@ $( document).ready(function() {
 //$('#mainpage').hide()
 //$( "#mainpage").fadeOut("slow", function(){})
 /*
+while (true){
+$("#img0").slideToggle('slow',
 setTimeout(
   function()
   {
-    //do something special
-  }, 5000);
-*/
 
+  }, 5000);
+})
+*/
 $( "#welcome-message").fadeIn(1500, function(){
 	$( "#are-you-a").fadeIn(1000, function(){
 		$( "#welcome-button").fadeIn(1000);
@@ -88,22 +90,23 @@ $( ".hamburger" ).show();
 
 $('#donator').click(function(){
   $('#welcome').fadeOut(1000, function(){
-    $('#location').fadeIn(1000, function(){
+    //$('#location').fadeIn(1000, function(){
       $('#itemfilter').fadeIn(1000)
     });
-  });
+  //});
 });
 
 $('#submitdonator').click(function(){
   for(i=1;i <= localStorage.inputnumber;i++){
 	if (eval('localStorage.accepteditems' + i) == $('select')[0].value){
 	if ($('.place').length == 0) {
-	  $('#changeloc').after("<div class = 'place' id = 'place1' ><span class = 'main'>" + eval('localStorage.nametextarea' + i) + "</span></div>")
+	  $('#changeloc').after("<div class = 'place' id = 'place1' ><span class = 'main' style = 'font-size: 2em; '>" + eval('localStorage.nametextarea' + i) + "</span></div>")
   }
   else{
-	  $('#' + $('.place')[$('.place').length - 1].id).after("<div class = 'place' id = 'place" + i +"' ><span class = 'main'>" + eval('localStorage.nametextarea' + i) + "</span></div>")
+	  $('#' + $('.place')[$('.place').length - 1].id).after("<div class = 'place' id = 'place" + i +"' ><span class = 'main' style = 'font-size: 2em; '>" + eval('localStorage.nametextarea' + i) + "</span></div>")
   }
 	}
+  $('#itemdonationsin')[0].textContent = $('select')[0].value
 }
 
 $( ".place").click(function(){
@@ -141,7 +144,7 @@ if (typeof x != 'undefined'){
 $('#donation').click(function(){
   $('#welcome').fadeOut(1000, function(){
     $('#name').fadeIn(1000, function(){
-      $('#locationinput').fadeIn(1000, function(){
+      //$('#locationinput').fadeIn(1000, function(){
         $('#imageuploaddiv').fadeIn(1000, function(){
           $('#descriptioninput').fadeIn(1000, function(){
             $('#itemsselect').fadeIn(1000, function(){
@@ -149,14 +152,14 @@ $('#donation').click(function(){
             });
           });
         });
-      });
+      //});
     });
   });
 });
 $('#submitdonation').click(function(){
 
   localStorage.setItem(checkLocalStorage('nametextarea'), $('#nametextarea')[0].value)
-  localStorage.setItem(checkLocalStorage('locationtextarea'), $('#locationtextarea')[0].value)/*
+  /*localStorage.setItem(checkLocalStorage('locationtextarea'), $('#locationtextarea')[0].value)
   var file = $('#imageupload')[0].files[0];
   var imgData = getBase64Image(file)
   $('#imageupload').onchange = function(event) {
@@ -194,11 +197,17 @@ $('#imageupload').change(function(){
   var reader = new FileReader();
   reader.onloadend = function(){
     var imageUrl = reader.result;
-	
+
     localStorage.setItem(checkLocalStorage('profileimage'), imageUrl);
   }
   reader.readAsDataURL(file);
 });
-
+$('#back').click(function(){
+  $('#mainpage').fadeOut(1000, function(){
+    $('#filterpage').fadeIn(1000, function(){
+      $('#itemfilter').fadeIn(1000)
+    });
+  });
+});
 
 });
