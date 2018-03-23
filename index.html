@@ -11,9 +11,11 @@
 
 		<header>
 			<a href = 'javascript:window.location.href=window.location.href'>
-			<!--<img src = 'DonationsTWA.svg' style = 'position: fixed; padding: 0px; top: 0px; left: 0px;' height = 60px' width = '145px' />-->
-			<img src = 'DonationTWA_dynamic01.png' style = 'position: fixed; padding: 0px; top: 0px; left: 0px;' height = 30px' width = '145px' />
-			<img src = 'DonationTWA_dynamic02.png' style = 'position: fixed; padding: 0px; top: 30px; left: 0px;' height = 30px' width = '145px' />
+			<img id = 'img0' src = 'DonationTWA_dynamic01.png' style = 'position: fixed; padding: 0px; top: 0px; left: 0px;' height = '60px'  />
+			<img id = 'img1' src = 'DonationTWA_dynamic02.png' style = 'position: fixed; padding: 0px; top: 30px; left: 0px;' height = '30px' width = '145px' />
+			<img id = 'img2' src = 'DonationTWA_dynamic03.png' style = 'position: fixed; padding: 0px; top: 30px; left: 0px;' height = '30px' width = '145px' />
+			<img id = 'img3' src = 'DonationTWA_dynamic04.png' style = 'position: fixed; padding: 0px; top: 30px; left: 0px;' height = '30px' width = '145px' />
+			<img id = 'img4' src = 'DonationTWA_dynamic05.png' style = 'position: fixed; padding: 0px; top: 30px; left: 0px;' height = '30px' width = '145px' />
 			</a>
 			<div id = 'title'>
 				<h1 id = 'title'>Donations: The Webapp</h1>
@@ -21,7 +23,7 @@
 		</header>
 		<div id = 'line'></div>
 	<div id = 'entirepage'>
-		
+
 		<div id = 'welcome'>
 			<h1 id = 'welcome-message'> Welcome!</h1>
 			<h1 id = 'are-you-a'>Are you a: </h1>
@@ -33,21 +35,24 @@
 		</div>
 
 		<div id = 'filterpage'>
+			<!--
 			<div id = 'location'>
 			<h2>Please enter your location:</h2>
 			<div id = 'googlemaps'>
 				<p>Google Maps Maybe?</p>
 			</div>
-			</div>
+			</div> -->
 			<div id = 'itemfilter'>
-				<h2>and your preferred items:</h2>
+				<h2>Select your preferred items:</h2>
 				<select>
 					<option value = ''></option>
 					<option value = 'Clothes'>Clothes</option>
 					<option value = 'Food'>Food</option>
+					<option value = 'Furniture'>Furniture</option>
+					<option value = 'Books'>Books</option>
 				</select>
 				<br />
-				<button class = 'btn-lg btn-block' id = 'submitdonator' >Submit</button>
+				<button class = 'btn-lg btn-block ' id = 'submitdonator' >Submit</button>
 			</div>
 		</div>
 
@@ -57,15 +62,17 @@
 				<br />
 				<textarea cols = '40' rows = '1'id = 'nametextarea'></textarea>
 			</div>
+			<!--
 			<div id = 'locationinput'>
 				<h2> and its location:</h2>
 				<br />
 				<textarea cols = '40' rows = '1'id = 'locationtextarea'></textarea>
-			</div>
+
+			</div>-->
 			<div id = 'imageuploaddiv'>
 				<h2>Upload an image:</h2>
 				<input accept = 'image/*' type = 'file' id = 'imageupload'/>
-				
+
 			</div>
 			<br/>
 			<div id = 'descriptioninput'>
@@ -79,6 +86,8 @@
 					<option value = ''></option>
 					<option value = 'Clothes'>Clothes</option>
 					<option value = 'Food'>Food</option>
+					<option value = 'Furniture'>Furniture</option>
+					<option value = 'Books'>Books</option>
 				</select>
 			</div>
 			<br />
@@ -108,13 +117,14 @@
 				Clothes
 			</span>
 			</p>
+
 		</div>
 
 		<div id = 'mainpage'>
-			<h2 id = 'donationsin'>Donations in:&nbsp;</h2>
+			<h2 id = 'donationsin' class = 'centered'> <span id = 'accepting'>Donations accepting:&nbsp; </span> <span id = 'itemdonationsin'></span></h2>
 			<h2 id = 'location'>NYC</h2>
 			<div id = 'changeloc'>
-				<a href = 'https://www.google.com'>Change Location</a>
+				<!--<a href = 'https://www.google.com'>Change Location</a>-->
 			</div>
 			<!--
 			<div class = 'place' id = 'place1' >
@@ -131,9 +141,11 @@
 
 			</div>
 			-->
+			<button class = 'btn-lg centered' id = 'back'  >Back</button>
 	</div>
 	</div>
 	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 	<script src = 'script.js'></script>
 </html>
