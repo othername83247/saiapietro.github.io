@@ -11,12 +11,12 @@
 
 		<header>
 			<a href = 'javascript:window.location.href=window.location.href'>
-			<img id = 'img0' src = 'DonationTWA_dynamic01.png' style = 'position: fixed; padding: 0px; top: 0px; left: 0px;' height = '60px'  />
-			<img id = 'img1' src = 'DonationTWA_dynamic02.png' style = 'position: fixed; padding: 0px; top: 30px; left: 0px;' height = '30px' width = '145px' />
+			<img id = 'img0' src = 'DonationsTWA.svg' style = 'position: fixed; padding: 0px; top: 0px; left: 0px;' height = '60px'  />
+			<!--<img id = 'img1' src = 'DonationTWA_dynamic02.png' style = 'position: fixed; padding: 0px; top: 30px; left: 0px;' height = '30px' width = '145px' />
 			<img id = 'img2' src = 'DonationTWA_dynamic03.png' style = 'position: fixed; padding: 0px; top: 30px; left: 0px;' height = '30px' width = '145px' />
 			<img id = 'img3' src = 'DonationTWA_dynamic04.png' style = 'position: fixed; padding: 0px; top: 30px; left: 0px;' height = '30px' width = '145px' />
 			<img id = 'img4' src = 'DonationTWA_dynamic05.png' style = 'position: fixed; padding: 0px; top: 30px; left: 0px;' height = '30px' width = '145px' />
-			</a>
+			--></a>
 			<div id = 'title'>
 				<h1 id = 'title'>Donations: The Webapp</h1>
 			</div>
@@ -60,7 +60,7 @@
 			<div id = 'name'>
 				<h2>Enter your event's name:</h2>
 				<br />
-				<textarea cols = '40' rows = '1'id = 'nametextarea'></textarea>
+				<textarea cols = '40' rows = '1'id = 'nametextarea' class = 'selector'></textarea>
 			</div>
 			<!--
 			<div id = 'locationinput'>
@@ -71,18 +71,18 @@
 			</div>-->
 			<div id = 'imageuploaddiv'>
 				<h2>Upload an image:</h2>
-				<input accept = 'image/*' type = 'file' id = 'imageupload'/>
+				<input accept = 'image/*' type = 'file' id = 'imageupload' class = 'selector'/>
 
 			</div>
 			<br/>
 			<div id = 'descriptioninput'>
 				<h2>Enter a full description of your event:</h2>
-				<textarea id = 'description' cols = '80' rows = '12'>
+				<textarea id = 'description' cols = '80' rows = '12' class = 'selector'>
 				</textarea>
 			</div>
 			<div id = 'itemsselect'>
 				<h2>Select your preffered item:</h2>
-				<select>
+				<select class = 'selector'>
 					<option value = ''></option>
 					<option value = 'Clothes'>Clothes</option>
 					<option value = 'Food'>Food</option>
