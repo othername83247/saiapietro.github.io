@@ -218,6 +218,7 @@ $('#imageupload').change(function(){
 });
 $('#back').click(function(){
   $('#mainpage').fadeOut(1000, function(){
+    $('.place').remove();
     $('#filterpage').fadeIn(1000, function(){
       $('#itemfilter').fadeIn(1000)
     });
