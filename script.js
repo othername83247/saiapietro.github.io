@@ -217,12 +217,14 @@ $('#imageupload').change(function(){
   reader.readAsDataURL(file);
 });
 $('#back').click(function(){
+	window.location.href=window.location.href;
+	/*
   $('#mainpage').fadeOut(1000, function(){
     $('.place').remove();
     $('#filterpage').fadeIn(1000, function(){
       $('#itemfilter').fadeIn(1000)
     });
-  });
+  });*/
 });
-//work
+
 });
