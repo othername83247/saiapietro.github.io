@@ -53,10 +53,15 @@ $("#img0").slideToggle('slow',
 setTimeout(
   function()
   {
-
+	$("#img1").slideToggle('slow',
+	setTimeout(
+		function(){
+			
+		)});
+	{
   }, 5000);
-})
-*/
+});*/
+
 $( "#welcome-message").fadeIn(1500, function(){
 	$( "#are-you-a").fadeIn(1000, function(){
 		$( "#welcome-button").fadeIn(1000);
@@ -98,6 +103,10 @@ $('#donator').click(function(){
 
 $('#submitdonator').click(function(){
   for(i=1;i <= localStorage.inputnumber;i++){
+	if ($('select')[0].value == ''){
+		alert('Please select an item.')
+		return
+	}
 	if (eval('localStorage.accepteditems' + i) == $('select')[0].value){
 	if ($('.place').length == 0) {
 	  $('#changeloc').after("<div class = 'place' id = 'place1' ><span class = 'main' style = 'font-size: 2em; '>" + eval('localStorage.nametextarea' + i) + "</span></div>")
@@ -157,7 +166,12 @@ $('#donation').click(function(){
   });
 });
 $('#submitdonation').click(function(){
-
+  for(i=0;i<4;i++){
+	  if ($('.selector')[i].value == ''){
+		  alert('Please fill out all the fields.')
+		  return
+	  }
+  }
   localStorage.setItem(checkLocalStorage('nametextarea'), $('#nametextarea')[0].value)
   /*localStorage.setItem(checkLocalStorage('locationtextarea'), $('#locationtextarea')[0].value)
   var file = $('#imageupload')[0].files[0];
